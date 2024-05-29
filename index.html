@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="container">
+        <h1>Venta de productos</h1>
+        <form name="formulario" id="formulario" onsubmit="vender(this)">
+            <div class="field">
+                <label>Nobre del producto:</label>
+                <input type="text" name="nombre" id="nombre" required>
+            </div>
+            <div class="field">
+                <label>Valor Producto</label><input type="text" name="valor" id="valor">
+            </div>
+            <div class="actions">
+                <input type="submit" value="Vender">
+                <button onclick="resetearRepositorio()">Resetear Repositorio</button>
+                <br>
+                <a href="tabla.html" >Ver productos  vendidos</a>
+            </div>
+        </form>
+    </main>
+    <script src="app.js"></script>
+    <script>
+        
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
