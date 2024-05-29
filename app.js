@@ -8,7 +8,7 @@ if (!productos || !productos.nombres || !productos.valores || !productos.masIVA)
 function vender(formulario) {
     const { nombre, valor } = formulario;
 
-    // Guardar el nombre y el valor del producto en el almacenamiento local
+    // Guardar el nombre y el valor del producto en el almacenamiento 
     productos.nombres.push(nombre.value);
     productos.valores.push(parseFloat(valor.value)); // Convertir el valor a número
 
